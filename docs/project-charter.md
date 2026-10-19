@@ -90,6 +90,15 @@ KeyMouse 采用普通库项目的轻量开源模式，不围绕商业版本或�
 
 阶段是质量门槛，不是发布日期。达不到门槛时继续补证据，不靠宣传绕过。
 
+## 当前设计文档
+
+以下文件是 Foundation 阶段的设计草案，不代表已经实现或验证：
+
+- [仓库结构与依赖边界](architecture/repository-structure.md)
+- [公共契约 v0](contracts/public-contract-v0.md)
+- [事件模型 v0](contracts/event-model-v0.md)
+- [ADR 0001：稳定的 C ABI 公共原生边界](decisions/0001-public-native-boundary.md)
+
 ## 成功标准
 
 - 用户无需理解四套平台 API 即可安装和集成 KeyMouse。
