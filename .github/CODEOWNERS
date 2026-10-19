@@ -1,0 +1,9 @@
+# Default owner until independent maintainers are appointed.
+* @AwayerCode
+
+/.github/ @AwayerCode
+/AGENTS.md @AwayerCode
+/LICENSE @AwayerCode
+/LICENSE-APACHE-2.0 @AwayerCode
+/LICENSE-MIT @AwayerCode
+/SECURITY.md @AwayerCode

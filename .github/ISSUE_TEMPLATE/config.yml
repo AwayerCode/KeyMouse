@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/AwayerCode/KeyMouse/security/advisories/new
+    about: Report vulnerabilities privately. Do not open a public security issue.
+  - name: Support and usage guidance
+    url: https://github.com/AwayerCode/KeyMouse/blob/main/SUPPORT.md
+    about: Read the support scope and current pre-alpha limitations.
+  - name: Contribution process
+    url: https://github.com/AwayerCode/KeyMouse/blob/main/CONTRIBUTING.md
+    about: Read the licensing, DCO, evidence, and pull request requirements.

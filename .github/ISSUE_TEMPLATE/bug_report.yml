@@ -1,0 +1,150 @@
+name: Bug report
+description: Report a reproducible documentation, tooling, binding, or input behavior problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include raw keystroke logs, pointer traces, window titles,
+        application content, credentials, or other sensitive data.
+
+        Report suspected vulnerabilities privately through the Security tab.
+        Do not disclose them in this issue.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues and pull requests.
+          required: true
+        - label: This report does not contain a suspected security vulnerability.
+          required: true
+        - label: I removed sensitive input and application data.
+          required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Select every platform where the problem was reproduced.
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux X11
+        - Linux Wayland
+        - Other or unknown
+    validations:
+      required: true
+
+  - type: input
+    id: system_details
+    attributes:
+      label: OS version and architecture
+      placeholder: "Example: Windows 11 24H2 x64, macOS 15 arm64, Ubuntu 24.04 x64"
+    validations:
+      required: true
+
+  - type: input
+    id: keymouse_version
+    attributes:
+      label: KeyMouse revision
+      description: Provide a release version or the full commit SHA.
+      placeholder: "main@0123456789abcdef"
+    validations:
+      required: true
+
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime and version
+      description: Node.js, Electron, Python, or other consuming runtime.
+      placeholder: "Node.js 24.4.0 / Electron 38.0.0 / Python 3.14"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: capability
+    attributes:
+      label: Capability
+      options:
+        - Global listening
+        - Shortcut registration
+        - Selective interception
+        - Event replacement
+        - TypeScript or Node.js binding
+        - Python binding
+        - Documentation or repository tooling
+        - Unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Backend
+      options:
+        - Windows low-level hook
+        - macOS CGEventTap
+        - macOS IOHID
+        - Linux X11 XRecord
+        - Linux X11 XInput2
+        - Linux evdev
+        - Linux uinput
+        - Wayland portal or compositor API
+        - Other or unknown
+        - Not applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Use sanitized values and the smallest reproducible case.
+      placeholder: |
+        1. Start ...
+        2. Focus ...
+        3. Press ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: permissions
+    attributes:
+      label: Permissions and lifecycle state
+      description: Include permissions granted or denied, secure input, lock screen, suspend, hot-plug, and whether the backend was active.
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized diagnostics
+      description: Paste only redacted logs. Do not include captured input content.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+    validations:
+      required: false
